@@ -5,7 +5,7 @@ import os
 from datetime import datetime, timedelta
 
 ACLARACION_FONT = 'Helvetica 9 bold'
-API_KEY = '630f09278100f36b31d5817b9a25697f'
+API_KEY = "api_key"
 
 def consume_api(city):    
     city_data =[]
