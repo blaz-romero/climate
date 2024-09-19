@@ -77,11 +77,11 @@ def show_images_complete(window, image_path, city, time_str, temperature, descri
 
         Label(frame, bg='light blue', font=(ACLARACION_FONT, 12), text=f"  {description.title()}").pack()
 
-        add_icon_label(frame, "static/images/icono-temperatura.png", f"  {temperature}°C")
+        add_icon_label(frame, "images/icono-temperatura.png", f"  {temperature}°C")
 
-        add_icon_label(frame, "static/images/icono-humedad.png", f"  {humidity}%")
+        add_icon_label(frame, "images/icono-humedad.png", f"  {humidity}%")
 
-        add_icon_label(frame, "static/images/icono-viento.png", f"  {wind} km/h")
+        add_icon_label(frame, "images/icono-viento.png", f"  {wind} km/h")
 
     except Exception as e:
         print(f"Error loading images: {e}")
@@ -225,11 +225,11 @@ def show_find_city(window, image_path, time_str, temperature, description, humid
 
         Label(frame, bg='light blue', font=(ACLARACION_FONT, 12), text=f"  {description.title()}").pack()
 
-        add_icon_label(frame, "static/images/icono-temperatura.png", f"  {temperature}°C")
+        add_icon_label(frame, "images/icono-temperatura.png", f"  {temperature}°C")
 
-        add_icon_label(frame, "static/images/icono-humedad.png", f"  {humidity}%")
+        add_icon_label(frame, "images/icono-humedad.png", f"  {humidity}%")
 
-        add_icon_label(frame, "static/images/icono-viento.png", f"  {wind} km/h")
+        add_icon_label(frame, "images/icono-viento.png", f"  {wind} km/h")
 
         
 
@@ -283,17 +283,17 @@ def get_extended_weather(lat, lon):
 def images_choise(description, local_time):
 
     if "cloud" in description:
-                image_path = "static/images/nublado-transformed.png" if 6 <= local_time.hour < 18 else "static/images/nublado-noche-transformed.png"
+                image_path = "images/nublado-transformed.png" if 6 <= local_time.hour < 18 else "images/nublado-noche-transformed.png"
     elif "clear" in description:
-                image_path = "static/images/soleado.png" if 6 <= local_time.hour < 18 else "static/images/despejado-noche-transformed.png"
+                image_path = "images/soleado.png" if 6 <= local_time.hour < 18 else "images/despejado-noche-transformed.png"
     elif "rain" in description:
-                image_path = "static/images/lluvia.png"
+                image_path = "images/lluvia.png"
     elif "storm" in description:
-                image_path = "static/images/tormenta.png"
+                image_path = "images/tormenta.png"
     elif "mist" in description:
-                image_path = "static/images/cubierto.png"
+                image_path = "images/cubierto.png"
     else:
-                image_path = "static/images/default.png"
+                image_path = "images/default.png"
     return image_path
 
 def show_images_extended(window, image_path, day, tempe_max, temp_min, description, row, col):
@@ -321,9 +321,9 @@ def show_images_extended(window, image_path, day, tempe_max, temp_min, descripti
 
         Label(frame, bg='light blue', font=(ACLARACION_FONT, 12), text=f"  {description.title()}").pack()
 
-        add_icon_label(frame, "static/images/icono-temperatura.png", f" max {tempe_max}°C")
+        add_icon_label(frame, "images/icono-temperatura.png", f" max {tempe_max}°C")
 
-        add_icon_label(frame, "static/images/icono-temperatura.png", f" min {temp_min}°C")
+        add_icon_label(frame, "images/icono-temperatura.png", f" min {temp_min}°C")
 
         Label(frame, bg='light blue', font=(ACLARACION_FONT), text="").pack()
 
@@ -337,17 +337,17 @@ def show_images_extended(window, image_path, day, tempe_max, temp_min, descripti
 def images_choise_extended(description)  :
 
     if "cloud" in description:
-                image_path = "static/images/nublado-transformed.png" 
+                image_path = "images/nublado-transformed.png" 
     elif "clear" in description:
-                image_path = "static/images/soleado.png" 
+                image_path = "images/soleado.png" 
     elif "rain" in description:
-                image_path = "static/images/lluvia.png"
+                image_path = "images/lluvia.png"
     elif "storm" in description:
-                image_path = "static/images/tormenta.png"
+                image_path = "images/tormenta.png"
     elif "mist" in description:
-                image_path = "static/images/cubierto.png"
+                image_path = "images/cubierto.png"
     else:
-                image_path = "static/images/default.png"
+                image_path = "images/default.png"
 
     return image_path  
 
